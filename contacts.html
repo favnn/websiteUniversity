@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Контакты</title>
+        <link rel="stylesheet" href="/assets/style.css">
+    </head>
+
+    <header>
+        <div id="header">
+            <div class="logo1">
+             <a href="mainPage.html">
+              <img src="/assets/pictures/logo.png" width="130" height="75" />
+             </a>
+            </div>
+           </div>
+
+        <div id="menu">
+          <ul>
+            <li><a href="mainPage.html">Главная</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+          </ul>
+        </div>
+      </header>
+
+    <body class="contact">
+        <h2>Связаться с нами</h2>
+        <p id="example">Информация</p>
+        <img width="40%" src="/assets/pictures/pic.jpeg">
+
+        <h4>Адрес</h4>
+        <p id="example">ЮГУ, ул. Чехова 16,  корпус 4</p>
+
+        <h4>Телефон</h4>
+        <p id="example">+79026947474<br>+79784701017</p>
+
+        <h4>Мы online</h4>
+        <a href="mainPage.html">Сайт</a><br>
+        <a href="mailto:nevyan2001@mail.ru">Почта</a>
+        
+        <h4>Отправить сообщение</h4>
+
+    
+                    
+        <form id="form">
+            <label>Full Name<br>
+                <input type="text"><br>
+            </label>
+            
+            <label for="email">Email<br>
+                <input type="email" id="email" name="email"><br> 
+            </label>
+            
+            <label>Message<br>
+                <textarea rows="6" cols="40" type="text"></textarea><br>
+               <input type="submit" value="Submit" id="submitButton">
+            </label>
+        </form>
+
+        <script> 
+            document.getElementById("form").addEventListener("submit", function(event) { 
+                event.preventDefault(); 
+     
+                var email = document.getElementById("email").value; 
+                var pattern = new RegExp("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$"); 
+     
+                if (pattern.test(email)) { 
+                    alert("Valid email address"); 
+                } else { 
+                    alert("inValid email address"); 
+                } 
+        }); 
+        </script> 
+
+        <h4>Как нас найти</h4>
+        
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/yugorskiy_gosudarstvenny_universitet/1136491139/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Югорский государственный университет</a><a href="https://yandex.ru/maps/57/khanty-mansiysk/category/university/184106140/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в Ханты‑Мансийске</a><iframe src="https://yandex.ru/map-widget/v1/?ll=69.027535%2C61.001186&mode=poi&poi%5Bpoint%5D=69.029889%2C61.000927&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1136491139&z=16.44" width="70%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+        <div>
+            <hr>
+            <p id="example">Если возникли вопросы, можете связяться с нами:</p>
+    
+            <p id="example">Список контактов:<br>+79026947474<br>emal@gmail.com</p>
+            <p id="example">Фио разработчика<br><b>Невьянцев Александр Михайлович</b></p>
+        </div>
+    </body>
+</html>
